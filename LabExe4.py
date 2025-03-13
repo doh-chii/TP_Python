@@ -31,10 +31,8 @@ class Token(object):
 
 class Lexer(object):
     def __init__(self, text):
-        # client string input, e.g. "3 * 5", "12 / 5 * 3", etc
         self.text = text
-
-        # self.pos is an index into self.text
+        
         self.pos = 0
         self.current_char = self.text[self.pos]
 
@@ -138,8 +136,6 @@ class Interpreter(object):
 def main():
     while True:
         try: 
-            # To run under Python 3 replace 'raw_input' call
-            # with 'input'
             text = input('calc> ')
         except EOFError:
             break
